@@ -1,3 +1,16 @@
+import {
+  AvatarImg,
+  Container,
+  DescriptionDiv,
+  Info,
+  Label,
+  LocationIcon,
+  LocationInfo,
+  Name,
+  Quontity,
+  StatusLi,
+  StatusList,
+} from './Profile.styled';
 import user from './user.json';
 
 export const Profile = () => {
@@ -9,28 +22,31 @@ export const Profile = () => {
   } = user;
 
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={user.avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Container>
+      <DescriptionDiv>
+        <AvatarImg src={user.avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Info>@{tag}</Info>
+        <LocationInfo>
+          <LocationIcon />
+          {location}
+        </LocationInfo>
+      </DescriptionDiv>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatusList>
+        <StatusLi>
+          <Label>Followers</Label>
+          <Quontity>{followers}</Quontity>
+        </StatusLi>
+        <StatusLi>
+          <Label>Views</Label>
+          <Quontity>{views}</Quontity>
+        </StatusLi>
+        <StatusLi>
+          <Label>Likes</Label>
+          <Quontity>{likes}</Quontity>
+        </StatusLi>
+      </StatusList>
+    </Container>
   );
 };
