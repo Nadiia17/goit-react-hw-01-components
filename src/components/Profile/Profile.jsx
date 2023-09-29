@@ -11,20 +11,12 @@ import {
   StatusLi,
   StatusList,
 } from './Profile.styled';
-import user from './user.json';
 
-export const Profile = () => {
-  const {
-    username,
-    tag,
-    location,
-    stats: { followers, views, likes },
-  } = user;
-
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Container>
       <DescriptionDiv>
-        <AvatarImg src={user.avatar} alt="User avatar" />
+        <AvatarImg src={avatar} alt="User avatar" />
         <Name>{username}</Name>
         <Info>@{tag}</Info>
         <LocationInfo>
@@ -36,15 +28,15 @@ export const Profile = () => {
       <StatusList>
         <StatusLi>
           <Label>Followers</Label>
-          <Quontity>{followers}</Quontity>
+          <Quontity>{stats.followers}</Quontity>
         </StatusLi>
         <StatusLi>
           <Label>Views</Label>
-          <Quontity>{views}</Quontity>
+          <Quontity>{stats.views}</Quontity>
         </StatusLi>
         <StatusLi>
           <Label>Likes</Label>
-          <Quontity>{likes}</Quontity>
+          <Quontity>{stats.likes}</Quontity>
         </StatusLi>
       </StatusList>
     </Container>

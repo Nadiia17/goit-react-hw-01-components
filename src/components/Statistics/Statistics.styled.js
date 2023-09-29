@@ -3,7 +3,7 @@ import { generateRandomPastelColor } from './GenerateColor';
 
 export const StatisticsSection = styled.section`
   margin: 20px auto;
-  width: 70%;
+  width: 450px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
