@@ -7,6 +7,7 @@ export const Friend = styled.li`
   padding: 10px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
+  background-color: #f0fff0;
 `;
 
 export const Status = styled.span`
@@ -22,7 +23,7 @@ export const Avatar = styled.div`
   height: 68px;
   border-radius: 50%;
   margin-right: 20px;
-  background-color: #f5f5f5;
+  background-color: #fff;
   background-image: url(${props => props.src});
   background-size: 70%;
   background-repeat: no-repeat;

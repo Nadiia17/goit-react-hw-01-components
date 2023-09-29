@@ -23,7 +23,7 @@ export const AvatarImg = styled.img`
   height: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
-  background-color: #f0f8ff;
+  background-color: #f0fff0;
 `;
 
 export const Name = styled.p`
